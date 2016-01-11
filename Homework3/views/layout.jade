@@ -1,0 +1,27 @@
+doctype
+html
+   head
+      title
+         =title
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+      style
+        include ../public/site.css
+
+
+body
+   header.nav.navbar-inverse.navbar-fixed-top
+      .container
+           .navbar-header
+               a.navbar-brand(href="/") Mobile devices
+           .navbar-collapse.collapse
+               ul.nav.navbar-nav
+                   each  item in menuLinks
+                       li
+                           a(href=item.link)
+                                =item.text
+
+   section.container
+      block content
+   footer
+      p.text-center
+        | Mobile devices &copy 2016

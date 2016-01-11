@@ -1,0 +1,10 @@
+extends layout
+block content
+   h2 Phones
+   table.table
+      each  phone in phones
+         tr
+            td
+               =phone.name
+            td
+               =phone.year

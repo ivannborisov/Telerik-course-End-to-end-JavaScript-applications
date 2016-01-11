@@ -1,0 +1,10 @@
+extends layout
+block content
+   h2 Wearables
+   table.table
+      each  wearable in wearables
+         tr
+            td
+               =wearable.name
+            td
+               =wearable.year
