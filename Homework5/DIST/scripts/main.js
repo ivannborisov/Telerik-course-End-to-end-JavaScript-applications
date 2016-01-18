@@ -1,0 +1,1 @@
+(function(){var a,b;opposite&&(b=-42),a=[1,2,3,4,5],a=[2],a=[2]}).call(this);

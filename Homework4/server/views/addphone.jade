@@ -1,0 +1,14 @@
+extends layout
+block content
+   form(id='form', method='post', action='/phones/create', enctype='multipart/form-data')
+      label(for='model') Model
+      input(type='text', id='model', name='model')
+      label(for='year') Year
+      input(type='number', id='year', name='year')
+      label(for='review') Review
+      input(type='text', id='review', name='review')
+      label(for='picture') Picture
+      input(type='file', id='picture', name='picture')
+      input(type='submit', value='Add Phone')
+
+

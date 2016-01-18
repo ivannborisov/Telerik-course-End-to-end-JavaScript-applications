@@ -1,0 +1,29 @@
+doctype
+html
+   head
+      title
+         =title
+      link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css')
+      link(rel='stylesheet', href='/css/styles.css')
+
+
+body
+   header.nav.navbar-inverse.navbar-fixed-top
+      .container
+           .navbar-header
+               a.navbar-brand(href="/") Smart phones
+           .navbar-collapse.collapse
+               ul.nav.navbar-nav
+                   li
+                       a(href="/") Home
+                   li
+                       a(href="/phones") All smart phones
+                   li
+                       a(href="/addphone") Add phone
+
+
+   section.container
+      block content
+   footer
+      p.text-center
+        | Smart phones &copy 2016

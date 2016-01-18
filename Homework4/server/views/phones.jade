@@ -1,0 +1,17 @@
+extends layout
+block content
+   h2 Phones
+
+   table.table
+      each  ph_inf, ph_id in phones
+         tr
+            td
+                img(src=ph_inf.pic).img-responsive
+            td
+               =ph_inf.name
+            td
+               =ph_inf.year
+
+
+
+
