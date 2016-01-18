@@ -7,3 +7,5 @@ Simple data:
    User:
 	username: ivan
 	password: ivan	
+
+Condition: Open ExamCondition.pdf
