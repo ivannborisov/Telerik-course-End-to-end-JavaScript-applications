@@ -1,0 +1,15 @@
+.navbar-header .navbar-brand {
+    color:red;
+}
+
+ul.nav.navbar-nav li  a{
+    color:red;
+}
+.btn-primary {
+    background: red;
+    border: darkred;
+}
+.btn-primary:hover {
+    background: #DB0000;
+    border: darkred;
+}

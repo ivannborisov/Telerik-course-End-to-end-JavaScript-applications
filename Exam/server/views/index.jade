@@ -1,0 +1,21 @@
+extends shared/layout
+block main-content
+    .container
+        h1 Youtube playlist system
+
+        h3 Top 8 most popular playlists
+        table.table-bordered.table
+            tr
+                th Title
+                th Description
+                th Category
+                th
+            each playlist in mostRatedPl
+                tr
+                    td #{playlist.title}
+                        td #{playlist.description}
+                        td #{playlist.category}
+                        td
+                            a.btn.btn-lg.btn-primary(href="/playlist/details/#{playlist._id}") View
+
+        p Update every 5 min.

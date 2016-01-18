@@ -1,0 +1,43 @@
+doctype
+html
+    head
+        title Youtube playlist system
+        link(rel="stylesheet" href="/lib/bootstrap-3.2.0/css/bootstrap.min.css")
+        link(rel="stylesheet" href="/css/site.css")
+    body
+        header.nav
+        .container
+            .navbar-header
+                a.navbar-brand(href="/") Youtube playlist System
+            .navbar-collapse.collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href="/") Home
+                    if (currentUser)
+                        li
+                            a(href="/playlist/create") Create Playlist
+                        li
+                            a(href="/playlist/own") My Playlists
+                        li
+                            a(href="/playlist/all") All Playlists
+                        li
+                            a(href="/user/profile/#{currentUser.username}") #{currentUser.username}
+                        li
+                            a(href="/logout") Logout
+                    if (!currentUser)
+                        li
+                            a(href="/register") Register
+                        li
+                            a(href="/login") Login
+
+        .container
+            if (errorMessage)
+                .alert.alert-danger #{errorMessage}
+
+            block main-content
+
+        footer
+            p.text-center
+                | &copy; Youtube playlist System 2016
+
+        include scripts

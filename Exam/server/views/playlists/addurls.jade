@@ -1,0 +1,21 @@
+extends ../shared/layout
+block main-content
+   .container
+      h4  Urls have to start with https://www.youtube.com/watch?
+      form(method="post")
+         label(for="url1") Url 1
+            input( class="form-control" value="#{urls.url1}"  type="text" name="url1" )
+         br
+         label(for="url2") Url 2
+            input( class="form-control" value="#{urls.url2}" type="text" name="url2")
+         br
+         label(for="url3") Url 3
+            input( class="form-control" value="#{urls.url3}" type="text" name="url3")
+         br
+         label(for="url4") Url 4
+            input( class="form-control" value="#{urls.url4}" type="text" name="url4")
+         br
+         label(for="url5") Url 5
+            input( class="form-control" value="#{urls.url5}" type="text" name="url5")
+         br
+         input(type="submit" class="btn btn-lg" value="Add urls")

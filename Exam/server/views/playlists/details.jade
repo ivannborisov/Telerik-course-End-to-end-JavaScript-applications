@@ -1,0 +1,33 @@
+extends ../shared/layout
+block main-content
+   .container
+      h2
+         | #{playlist.title}
+         if(playlist.private)
+            = '(Private)'
+         else
+            = '(Public)'
+      h3 Rating: #{parseFloat(playlist.rating).toFixed(1)}
+      if (currentUser)
+         form(method="post" action="/playlist/rate")
+            input(type="hidden" name="plid" value="#{playlist._id}")
+            select(name="rating")
+               option(value="1") 1
+               option(value="2") 2
+               option(value="3") 3
+               option(value="4") 4
+               option(value="5") 5
+            input(type="submit" value="Rate")
+      h4
+         | Category: #{playlist.category}
+      p Created by:#{playlist.creator}
+      p Created on: #{playlist.creationDate}
+      h3 Videos
+      if currentUser && playlist.creator === currentUser.username
+         a.btn.btn-lg.btn-primary(href="/playlist/addurls/#{playlist._id}") Add more videos
+      br
+      br
+      each url in playlist.videoUrls
+         p
+            a(href="#{url}" target="blanked") #{url}
+
